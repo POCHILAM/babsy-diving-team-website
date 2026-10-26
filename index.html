@@ -83,5 +83,79 @@ img, video {
 </video>
 
 
+
+<h2>Contact BABSY DIVING TEAM</h2>
+<p>Visit us at Bamburi Beach, Mombasa, Kenya.</p>
+<p>Contact us on WhatsApp for activities, current prices and bookings.</p>
+
+<p>
+  <a href="https://wa.me/254733294427" target="_blank" rel="noopener">
+    Chat with us on WhatsApp
+  </a>
+</p>
+
+<h2>Request a Booking</h2>
+<form id="bookingForm">
+  <p>
+    <input type="text" id="customerName" placeholder="Your full name" required>
+  </p>
+  <p>
+    <input type="tel" id="customerPhone" placeholder="Your phone number" required>
+  </p>
+  <p>
+    <label for="bookingDate">Preferred date:</label>
+    <input type="date" id="bookingDate" required>
+  </p>
+  <p>
+    <label for="visitorCount">Number of visitors:</label>
+    <input type="number" id="visitorCount" min="1" value="1" required>
+  </p>
+  <p>
+    <label for="activity">Choose an activity:</label>
+    <select id="activity" required>
+      <option value="">Select an activity</option>
+      <option>Swimming</option>
+      <option>Diving</option>
+      <option>Boat rides</option>
+      <option>Beach activities</option>
+      <option>Group package</option>
+      <option>Other activity</option>
+    </select>
+  </p>
+  <p>
+    <textarea id="bookingDetails" placeholder="Extra details or questions"></textarea>
+  </p>
+  <button type="submit">Prepare WhatsApp Booking</button>
+</form>
+
+<p id="bookingResult"></p>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const date = document.getElementById("bookingDate").value;
+  const visitors = document.getElementById("visitorCount").value;
+  const activity = document.getElementById("activity").value;
+  const details = document.getElementById("bookingDetails").value.trim();
+
+  const message = "Hello BABSY DIVING TEAM, I would like to request a booking.\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Preferred date: " + date + "\n" +
+    "Number of visitors: " + visitors + "\n" +
+    "Activity: " + activity + "\n" +
+    "Extra details: " + (details || "None") + "\n" +
+    "Please confirm availability and your current prices in KES.";
+
+  const link = "https://wa.me/254733294427?text=" + encodeURIComponent(message);
+
+  document.getElementById("bookingResult").innerHTML =
+    '<a href="' + link + '" target="_blank" rel="noopener">Click here to continue your booking in WhatsApp</a>';
+});
+</script>
+
 </body>
 </html>
