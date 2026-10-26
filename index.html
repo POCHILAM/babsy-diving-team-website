@@ -2,34 +2,127 @@
 <html>
 <head>
   <title>BABSY DIVING TEAM</title>
-  <style>
+  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: #163247;
-  background: linear-gradient(#e4f7ff, #ffffff);
+  line-height: 1.7;
+  color: #183548;
+  background: #f2fbff;
 }
+
 h1 {
-  padding: 30px 10px;
-  color: white;
-  background: linear-gradient(135deg, #006994, #00a6b2);
-  border-radius: 12px;
+  margin: 0;
+  padding: 42px 15px;
+  color: #ffffff;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #004e73, #008ca8, #35c6c8);
 }
+
 h2 {
-  margin-top: 35px;
-  color: #006994;
+  margin: 35px 0 15px;
+  color: #006b87;
+  font-size: clamp(23px, 4vw, 32px);
 }
+
 p {
-  font-size: 18px;
+  max-width: 850px;
+  margin: 12px auto;
+  padding: 0 12px;
+  font-size: 17px;
 }
-img, video {
-  max-width: 100%;
+
+img,
+video {
+  display: inline-block;
+  width: auto;
+  max-width: min(92%, 520px);
+  max-height: 380px;
   height: auto;
+  margin: 12px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 65, 90, 0.18);
+}
+
+a {
+  display: inline-block;
   margin: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 60, 90, 0.18);
+  padding: 12px 22px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #087f8c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #005b70;
+}
+
+input,
+select,
+textarea {
+  width: min(92%, 430px);
+  margin: 6px;
+  padding: 12px;
+  border: 1px solid #b5d7e2;
+  border-radius: 8px;
+  background: #ffffff;
+  font: inherit;
+}
+
+button {
+  margin: 12px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #008c72;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #006b57;
+}
+
+form {
+  width: min(94%, 600px);
+  margin: 20px auto;
+  padding: 20px 10px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 65, 90, 0.10);
+}
+
+#bookingResult {
+  overflow-wrap: anywhere;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    padding: 30px 10px;
+  }
+
+  img,
+  video {
+    max-width: 95%;
+    margin: 8px 0;
+  }
 }
 </style>
 </head>
