@@ -124,55 +124,82 @@ form {
     margin: 8px 0;
   }
 }
+/* Neat photo and video galleries */
+#photo-gallery,
+#video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+#photo-gallery img,
+#video-gallery video {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
 </style>
 </head>
 <body>
-  <h1>Welcome to BABSY DIVING TEAM</h1>
-  
-  <h2>Our Beach Gallery</h2>
-<p>Explore the beach experiences and memories of BABSY DIVING TEAM, Bamburi Beach, Mombasa.</p><p>Bamburi Beach, Mombasa, Kenya</p><img src="beach1.jpeg" alt="BABSY DIVING TEAM beach" width="400">
-  <img src="beach2.jpeg" alt="BABSY DIVING TEAM beach photo 2" width="400">
-  <img src="beach3.jpeg" alt="BABSY DIVING TEAM beach photo 3" width="400">
-  <img src="beach4.jpeg" alt="BABSY DIVING TEAM beach photo 4" width="400">
-  <img src="beach5.jpeg" alt="BABSY DIVING TEAM beach photo 5" width="400">
-  <img src="beach6.jpeg" alt="BABSY DIVING TEAM beach photo 6" width="400">
-  <img src="beach7.jpg" alt="BABSY DIVING TEAM beach photo 7" width="400">
-  <img src="beach8.jpeg" alt="BABSY DIVING TEAM beach photo 8" width="400">
-  <img src="beach9.jpeg" alt="BABSY DIVING TEAM beach photo 9" width="400">
-  <img src="beach10.jpg" alt="BABSY DIVING TEAM beach photo 10" width="400">
-  <img src="beach11.jpg" alt="BABSY DIVING TEAM beach photo 11" width="400">
-  
+ 
+<h1>Welcome to BABSY DIVING TEAM</h1>
+
+<h2>Our Beach Gallery</h2>
+<p>Explore the beach experiences and memories of BABSY DIVING TEAM, Bamburi Beach, Mombasa.</p>
+<p>Bamburi Beach, Mombasa, Kenya</p>
+
+<div id="photo-gallery">
+  <img src="beach1.jpeg" alt="BABSY DIVING TEAM beach">
+  <img src="beach2.jpeg" alt="BABSY DIVING TEAM beach photo 2">
+  <img src="beach3.jpeg" alt="BABSY DIVING TEAM beach photo 3">
+  <img src="beach4.jpeg" alt="BABSY DIVING TEAM beach photo 4">
+  <img src="beach5.jpeg" alt="BABSY DIVING TEAM beach photo 5">
+  <img src="beach6.jpeg" alt="BABSY DIVING TEAM beach photo 6">
+  <img src="beach7.jpg" alt="BABSY DIVING TEAM beach photo 7">
+  <img src="beach8.jpeg" alt="BABSY DIVING TEAM beach photo 8">
+  <img src="beach9.jpeg" alt="BABSY DIVING TEAM beach photo 9">
+  <img src="beach10.jpg" alt="BABSY DIVING TEAM beach photo 10">
+  <img src="beach11.jpg" alt="BABSY DIVING TEAM beach photo 11">
+</div>
+
 <h2>Our Beach Videos</h2>
-<video width="400" controls>
-  <source src="vid1.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid2.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid3.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid4.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid5.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid6.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid7.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid8.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid9.mp4" type="video/mp4">
-</video>
-<video width="400" controls>
-  <source src="vid10.mp4" type="video/mp4">
-</video>
+<div id="video-gallery">
+  <video controls>
+    <source src="vid1.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid2.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid3.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid4.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid5.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid6.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid7.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid8.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid9.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="vid10.mp4" type="video/mp4">
+  </video>
+</div>
+
 
 
 
