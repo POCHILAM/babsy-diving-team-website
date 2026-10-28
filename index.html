@@ -202,6 +202,104 @@ form {
     grid-column: 2;
   }
 }
+/* Professional BABSY DIVING TEAM booking form */
+#bookingForm {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #d9e2e8;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#bookingForm p {
+  margin: 0 0 18px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5df;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #243746;
+  font: inherit;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+  outline: 2px solid #168aad;
+  border-color: #168aad;
+}
+
+#bookingForm textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+#bookingForm label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #243746;
+}
+
+#bookingForm button {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #087e8b;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#bookingForm button:hover {
+  background: #066570;
+}
+
+#bookingResult {
+  max-width: 600px;
+  margin: 15px auto;
+  line-height: 1.6;
+}
+
+#bookingResult a {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 7px;
+  background: #16803c;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  #bookingForm {
+    padding: 18px;
+    margin: 15px 0;
+  }
+}
+/* Align the booking heading to the left */
+#booking h2 {
+  text-align: left;
+  max-width: 600px;
+  margin: 25px auto 15px;
+}
+
+@media (max-width: 640px) {
+  #booking h2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -326,7 +424,8 @@ PADI diving courses for beginners and advanced divers.</p>
   </a>
 </p>
 
-<h2>Request a Booking</h2>
+<section id="booking">
+  <h2>Request a Booking</h2>
 <form id="bookingForm">
   <p>
     <input type="text" id="customerName" placeholder="Your full name" required>
@@ -361,6 +460,7 @@ PADI diving courses for beginners and advanced divers.</p>
 </form>
 
 <p id="bookingResult"></p>
+  </section>
 
 <script>
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
