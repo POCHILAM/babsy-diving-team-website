@@ -195,7 +195,21 @@ form {
     grid-column: 1;
   }
 
-  #photo-gallery,
+  #media-galleries {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px 24px;
+    align-items: start;
+  }
+
+  #media-galleries > h2:nth-of-type(1),
+  #media-galleries > p,
+  #photo-gallery {
+    grid-column: 1;
+  }
+
+  #media-galleries > h2:nth-of-type(2),
   #video-gallery {
     grid-column: 2;
   }
@@ -358,7 +372,7 @@ PADI diving courses for beginners and advanced divers.</p>
   <p>Contact us to discuss your plans, available activities, current prices, and availability.</p>
   <p><a href="https://wa.me/254733294427">Enquire about events on WhatsApp</a></p>
 </section>
-  
+  <div id="media-galleries">
   <h2>Our Ocean Water Gallery</h2>
 <p>Explore the Ocean experiences and memories of BABSY DIVING TEAM, Bamburi, Mombasa.</p>
 <p>Bamburi, Mombasa, Kenya</p>
@@ -409,7 +423,7 @@ PADI diving courses for beginners and advanced divers.</p>
     <source src="vid10.mp4" type="video/mp4">
   </video>
 </div>
-
+</div>
 
 
 
