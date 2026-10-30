@@ -174,26 +174,24 @@ form {
     grid-template-columns: 1fr;
   }
 }
-/* BABSY DIVING TEAM: information left, media right */
+/* Professional BABSY DIVING TEAM desktop layout */
 @media (min-width: 900px) {
   body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 20px;
+    gap: 28px;
     align-items: start;
   }
 
   body > h1 {
     grid-column: 1 / -1;
+    text-align: center;
   }
 
   #about-us,
-  #beach-activities,
+  #water-activities,
   #events-parties,
-  #contact,
-  #booking,
-  #location,
-  #social-media {
+  #booking {
     grid-column: 1;
   }
 
