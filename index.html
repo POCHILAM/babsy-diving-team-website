@@ -174,64 +174,67 @@ form {
     grid-template-columns: 1fr;
   }
 }
-/* Responsive BABSY DIVING TEAM layout */
-@media (min-width: 900px) {
-  body {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 28px;
-    align-items: start;
-  }
-
-  body > h1 {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  #media-galleries {
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-    align-content: start;
-  }
-
-  #media-galleries > h2,
-  #media-galleries > p,
-  #photo-gallery,
-  #video-gallery {
-    grid-column: 1;
-  }
-
-  #about-us,
-  #water-activities,
-  #events-parties,
-  #booking {
-    grid-column: 2;
-  }
+/* Full-width responsive BABSY DIVING TEAM layout */
+* {
+  box-sizing: border-box;
 }
 
-/* Make photos and videos fit their containers */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
+}
+
+body {
+  display: block;
+  text-align: left;
+}
+
+#media-galleries {
+  display: block;
+  width: 100%;
+}
+
+#photo-gallery,
+#video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
 #photo-gallery img,
 #video-gallery video {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
-  box-sizing: border-box;
 }
 
-/* Phone layout */
-@media (max-width: 899px) {
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+#bookingForm {
+  width: 100%;
+  max-width: 700px;
+}
+
+@media (max-width: 600px) {
+  html,
   body {
-    display: block;
-    padding: 12px;
+    padding: 8px;
   }
 
-  #media-galleries {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
+  #photo-gallery,
+  #video-gallery {
+    grid-template-columns: 1fr;
   }
 }
 /* Professional BABSY DIVING TEAM booking form */
