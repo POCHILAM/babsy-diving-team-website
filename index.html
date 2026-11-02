@@ -345,6 +345,63 @@ body {
   border-radius: 14px;
   object-fit: cover;
 }
+/* Align all website content consistently */
+body,
+body h1,
+body h2,
+body h3,
+body p,
+section {
+  text-align: left;
+}
+
+/* Align booking form with the headings */
+#booking {
+  width: 100%;
+  text-align: left;
+}
+
+#booking h2 {
+  max-width: 700px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+#bookingForm {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+#bookingResult {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Display social media logos side by side */
+#social-media {
+  width: 100%;
+  text-align: left;
+}
+
+#social-media p:has(> a) {
+  display: inline-flex;
+  margin: 8px 18px 8px 0;
+  vertical-align: middle;
+}
+
+#social-media a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  #social-media p:has(> a) {
+    margin-right: 10px;
+  }
+}
 </style>
 </head>
 <body>
