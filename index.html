@@ -504,6 +504,26 @@ body a[href^="tel:"]:hover,
 body a[href*="maps.app.goo.gl"]:hover {
   background-color: #1EAD4E;
 }
+/* BOOK NOW button */
+#booking-panel summary {
+  display: inline-block;
+  background: #25C45A;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+#booking-panel summary:hover {
+  background: #1EAD4E;
+}
+
+#booking-panel[open] summary {
+  margin-bottom: 15px;
+}
 </style>
 </head>
 <body>
@@ -630,45 +650,58 @@ PADI diving courses for beginners and advanced divers.</p>
   </a>
 </p>
 
-<section id="booking">
-  <h2>Request a Booking</h2>
-<form id="bookingForm">
-  <p>
-    <input type="text" id="customerName" placeholder="Your full name" required>
-  </p>
-  <p>
-    <input type="tel" id="customerPhone" placeholder="Your phone number" required>
-  </p>
-  <p>
-    <label for="bookingDate">Preferred date:</label>
-    <input type="date" id="bookingDate" required>
-  </p>
-  <p>
-    <label for="visitorCount">Number of visitors:</label>
-    <input type="number" id="visitorCount" min="1" value="1" required>
-  </p>
-  <p>
-    <label for="activity">Choose an activity:</label>
-    <select id="activity" required>
-      <option value="">Select an activity</option>
-     <option>Diving</option>
-      <option>Snorkling</option>
-      <option>Scuba Diving</option>
-      <option>Boat rides</option>
-      <option>Deep Sea activities</option>
-      <option>Swimming</option>
-      <option>Group package</option>
-      <option>Other activity</option>
-    </select>
-  </p>
-  <p>
-    <textarea id="bookingDetails" placeholder="Extra details or questions"></textarea>
-  </p>
-  <button type="submit">Prepare WhatsApp Booking</button>
-</form>
 
-<p id="bookingResult"></p>
+<details id="booking-panel">
+  <summary>BOOK NOW</summary>
+
+  <section id="booking">
+    <h2>Request a Booking</h2>
+
+    <form id="bookingForm">
+      <p>
+        <input type="text" id="customerName" placeholder="Your full name" required>
+      </p>
+
+      <p>
+        <input type="tel" id="customerPhone" placeholder="Your phone number" required>
+      </p>
+
+      <p>
+        <label for="bookingDate">Preferred date:</label>
+        <input type="date" id="bookingDate" required>
+      </p>
+
+      <p>
+        <label for="visitorCount">Number of visitors:</label>
+        <input type="number" id="visitorCount" min="1" value="1" required>
+      </p>
+
+      <p>
+        <label for="activity">Choose an activity:</label>
+        <select id="activity" required>
+          <option value="">Select an activity</option>
+          <option>Diving</option>
+          <option>Snorkling</option>
+          <option>Scuba Diving</option>
+          <option>Boat rides</option>
+          <option>Deep Sea activities</option>
+          <option>Swimming</option>
+          <option>Group package</option>
+          <option>Other activity</option>
+        </select>
+      </p>
+
+      <p>
+        <textarea id="bookingDetails" placeholder="Extra details or questions"></textarea>
+      </p>
+
+      <button type="submit">Prepare WhatsApp Booking</button>
+    </form>
+
+    <p id="bookingResult"></p>
   </section>
+</details>
+
 
 <script>
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
